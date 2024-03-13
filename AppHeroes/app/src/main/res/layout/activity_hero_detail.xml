@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.HeroDetail">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideH1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90"/>
+
+    <TextView
+        android:id="@+id/heroNameTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/ggBridge"
+        app:layout_constraintStart_toEndOf="@id/guideV1"
+        app:layout_constraintEnd_toStartOf="@id/guideV2"
+        app:layout_constraintBottom_toTopOf="@id/guideH1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAlignment="center"/>
+
+    <!--Diseño de perfil del heroe-->
+    <ImageView
+        android:id="@+id/imgIndHero"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:padding="5dp"
+        android:background="@drawable/border"
+        android:src="@drawable/dcs"
+        app:layout_constraintStart_toEndOf="@id/guideV1"
+        app:layout_constraintEnd_toStartOf="@id/guideV2"
+        app:layout_constraintTop_toBottomOf="@id/guideH1"/>
+
+    <TextView
+        android:id="@+id/heroNameTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/guideV2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guideV1"
+        app:layout_constraintTop_toBottomOf="@id/imgIndHero" />
+    <!--Descripcion del heroe-->
+    <TextView
+        android:id="@+id/heroDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@id/guideV1"
+        app:layout_constraintEnd_toStartOf="@id/guideV2"
+        app:layout_constraintTop_toBottomOf="@id/heroNameTxt"/>
+
+    <!--Poderes del heroe-->
+    <TextView
+        android:id="@+id/powerTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Power"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/heroPower"
+        app:layout_constraintEnd_toStartOf="@id/guideV2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guideV1"
+        app:layout_constraintTop_toBottomOf="@id/heroDesc" />
+
+    <TextView
+        android:id="@+id/heroPower"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@id/guideH2"
+        app:layout_constraintEnd_toStartOf="@id/guideV2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guideV1"
+        app:layout_constraintTop_toBottomOf="@id/powerTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
